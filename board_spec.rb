@@ -53,11 +53,20 @@ describe "Board" do
   it "Can update board based on combined array" do
     my_board = Board.new
     my_board.make_board
-    my_board.update_board([0,0])
+    my_board.update_board([0, 0])
     # expect{my_board.update_board([0, 0])}.to change{my_board.get_board}
     #   .from([[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]].to_s)
     #   .to([[0,99,0,0,0,0],[99,99,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]].to_s)
     expect(my_board.get_board).to eq [[0,99,0,0,0,0],[99,99,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]]
+  end
+
+  it "Can return the correct value at the given coordinates" do
+    my_board = Board.new
+    my_board.make_board
+    my_board.make_move([0, 0])
+    expect(my_board.get_value([0, 0])).to eq 99
+    my_board.make_move([3, 3])
+    expect(my_board.get_value([3, 3])).to eq 99
   end
 
 end

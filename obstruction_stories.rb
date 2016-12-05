@@ -4,8 +4,9 @@ Epic 1: THE BOARD
 #Story 2: The board can check vertical spaces
 #Story 3: The board can check horizontal spaces
 #Story 4: The board can check diagonal spaces
-Story 5: The board object should return available spaces
-Story 6: The board object should be able to reset
+#Story 5: The board object should return available spaces
+#Story 6: The board object should be able to reset
+  
 
 Epic 2: THE USERS
 Story 1: As a developer I can create a user

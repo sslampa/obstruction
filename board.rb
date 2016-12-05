@@ -118,8 +118,11 @@ class Board
     combined_array.each do |coords|
       make_move(coords)
     end
+  end
 
-    combined_array
+  #Getter function for the value at the given coordinates
+  def get_value(coordinates)
+    @board_array[coordinates[0]][coordinates[1]]
   end
 
 end
