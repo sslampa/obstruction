@@ -1,9 +1,9 @@
 Obstruction
 Epic 1: THE BOARD
 # Story 1: As a developer I can create a board that should be 6 x 6
-Story 2: The board can check vertical spaces
-Story 3: The board can check horizontal spaces
-Story 4: The board can check diagonal spaces
+#Story 2: The board can check vertical spaces
+#Story 3: The board can check horizontal spaces
+#Story 4: The board can check diagonal spaces
 Story 5: The board object should return available spaces
 Story 6: The board object should be able to reset
 
