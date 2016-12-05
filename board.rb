@@ -29,8 +29,8 @@ class Board
   end
 
   #Changes value at given input in the board
-  def make_move(input)
-    @board_array[input[0]][input[1]] = 99
+  def make_move(user_input)
+    @board_array[user_input[0]][user_input[1]] = 99
   end
 
   #Getter function to show the current board
@@ -107,4 +107,19 @@ class Board
 
     returned_array
   end
+
+  #Collects all returned arrays from check_vertical, check_horizontal, and
+  #check_diagonal. Updates board iteratively.
+  def update_board(user_input)
+    combined_array = check_vertical(user_input)
+      .concat(check_horizontal(user_input))
+      .concat(check_diagonal(user_input))
+
+    combined_array.each do |coords|
+      make_move(coords)
+    end
+
+    combined_array
+  end
+
 end
